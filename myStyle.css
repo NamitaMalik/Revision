@@ -1,0 +1,72 @@
+
+/* Id gets preference over Class*/
+/* Id gets preference over pseudo selectors*/
+/* Id gets preference over element selector*/
+
+/*Class*/
+
+.change-color{
+color:red
+}
+
+/*Id*/
+
+#link1,#link2{
+    color:blue
+}
+
+/*Pseudo Selector*/
+
+a:hover{
+    color:green;
+    text-decoration: none;
+}
+
+a{
+    color:yellow;
+}
+
+#hello-world{
+    height: 100px;
+    background: url(background.png);
+    border: 5px solid #F00;
+    /* TOP/BOTTOM LEFT/RIGHT*/
+    padding: 20px;
+    /* ALL AROUND*/
+    margin:20px;
+}
+#hello-world2{
+    height: 100px;
+    background: grey;
+    border: 5px solid #F00;
+    /** TOP RIGHT BOTTOM LEFT*/
+    padding: 20px 5px 15px 8px;
+    margin:30px;
+}
+
+li{
+    display: inline;
+    height: 50px;
+}
+
+/*Treat inline elements as block elements*/
+
+.change-display{
+height: 50px;
+display: inline-block;
+}
+
+/* Series of block level elements, not inline but side by side and little more control over height, use float property*/
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float:right;
+}
+
+.clear{
+    display: block;
+    clear:right;
+}
