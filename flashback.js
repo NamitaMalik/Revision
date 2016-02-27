@@ -140,3 +140,25 @@ interval();
 *
 *
 * */
+
+/*
+CDN:
+--> Cloud Delivery Network
+--> Data here is STATIC CONTENT.
+--> Suppose we make a request, it will go to the nearest server in CDN, say Chennai Server. If Chennai Server has the requested data, it will send data in response.
+ This is a HIT Case.
+In case Chennai server doesn't have the requested data, it will message other servers in the CDN, asking fir the requested data. The server having the data will send the data. 1 copy will be kept at local CDN server through which request was made,
+ another copy would be sent in response.
+This is a MISS Case.
+In next call, when user would be making the same request, the data would be fetched from a local server that would be at Chennai.
+ */
+
+/* Increase App Performance
+--> script tab before body ends
+--> one js and minification
+--> one css and minification
+--> svg graphics instead of png for icons
+--> img widh and height
+--> CDN usage
+
+ */
