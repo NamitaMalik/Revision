@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="ParentController">
+    <h1>Parent Controller</h1>
+    <input type="button" ng-click="clickMe()" value="Click Parent Controller to Broadcast">
+    {{parentData}}
+    {{parentsOwnData}}
+    {{secondChildDatainParent}}
+    <div ng-controller="ChildController">
+        <h1>Child Controller</h1>
+        <input type="button" ng-click="clickMe()" value="Click Child Controller to Emit">
+        {{childData}}
+        {{firstChildData}}
+        {{childEventsOwnData}}
+        {{secondChildDatainFirst}}
+    </div>
+    <div ng-controller="SecondChildController">
+        <h1>Second Child Controller</h1>
+        <input type="button" ng-click="clickMe()" value="Click Second Child Controller to Broadcast on $rootScope">
+        {{secondChildData}}
+        <input type="button" ng-click="clickToEmit()" value="Click Second Child Controller to Emit on $rootScope">
+    </div>
+</div>
+
+<script src="angular.min.js"></script>
+<script src="mainCtrl.js"></script>
+</body>
+</html>
