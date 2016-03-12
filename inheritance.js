@@ -16,8 +16,16 @@ function User(n, age,sex) {
         name = n;
     };
     //If you do not want to change name, remove this set method
+    this.getAge = function (){
+        return age;
+    };
+    this.setAge = function(age){
+        this.age = age;
+    };
 }
-
+//Prototype is something like static, that's why it is able to access public variable.
+// Prototype function is better than class public function because class functions would take memory into each object
+// while prototype function would take memory in prototype only.
 User.prototype.getSex = function(){
     return this.sex;
 };

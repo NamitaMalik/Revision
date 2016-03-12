@@ -8,21 +8,21 @@
 <div ng-controller="ParentController">
     <h1>Parent Controller</h1>
     <input type="button" ng-click="clickMe()" value="Click Parent Controller to Broadcast">
-    {{parentData}}
-    {{parentsOwnData}}
-    {{secondChildDatainParent}}
+    <span ng-show="parentData">parentData--->{{parentData}}</span>
+    <span ng-show="parentsOwnData">parentsOwnData---->{{parentsOwnData}}</span>
+    <span ng-show="secondChildDatainParent">secondChildDatainParent---->{{secondChildDatainParent}}</span>
     <div ng-controller="ChildController">
         <h1>Child Controller</h1>
         <input type="button" ng-click="clickMe()" value="Click Child Controller to Emit">
-        {{childData}}
-        {{firstChildData}}
-        {{childEventsOwnData}}
-        {{secondChildDatainFirst}}
+        <span ng-show="childData">childData---->{{childData}}</span>
+        <span ng-show="firstChildData">firstChildData--->{{firstChildData}}</span>
+        <span ng-show="childEventsOwnData">childEventsOwnData----->{{childEventsOwnData}}</span>
+        <span ng-show="secondChildDatainFirst">secondChildDatainFirst---->{{secondChildDatainFirst}}</span>
     </div>
     <div ng-controller="SecondChildController">
         <h1>Second Child Controller</h1>
         <input type="button" ng-click="clickMe()" value="Click Second Child Controller to Broadcast on $rootScope">
-        {{secondChildData}}
+       <span ng-show="secondChildData">secondChildData---->{{secondChildData}}</span>
         <input type="button" ng-click="clickToEmit()" value="Click Second Child Controller to Emit on $rootScope">
     </div>
 </div>
