@@ -6,6 +6,7 @@
 </head>
 <body>
 <div ng-controller="ParentController">
+    {{user.name}}
     <h1>Parent Controller</h1>
     <input type="button" ng-click="clickMe()" value="Click Parent Controller to Broadcast">
     <span ng-show="parentData">parentData--->{{parentData}}</span>
@@ -25,6 +26,13 @@
        <span ng-show="secondChildData">secondChildData---->{{secondChildData}}</span>
         <input type="button" ng-click="clickToEmit()" value="Click Second Child Controller to Emit on $rootScope">
     </div>
+</div>
+<div ng-controller="PromiseController">
+
+    <button ng-click="callingFunction()">Click Me!!!!!</button>
+    <span>{{result}}</span>
+    <span>{{failure}}</span>
+
 </div>
 
 <script src="angular.min.js"></script>

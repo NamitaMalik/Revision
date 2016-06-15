@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Accion Labs Test</title>
+</head>
+<body>
+<ul id="people">
+    <li><a href="http://microsoft.com">microsoft.com</a></li>
+    <li><a href="http://facebook.com">facebook.com</a></li>
+    <li><a href="http://apple.com">apple.com</a></li>
+    <li><a href="http://mastercard.com">mastercard.com</a></li>
+</ul>
+<script>
+    var people = [
+        {firstname: "Micro", lastname: "Soft", site: "http://microsoft.com"},
+        {firstname: "Face", lastname: "Book", site: "http://facebook.com"},
+        {firstname: "App", lastname: "Le", site: "http://apple.com"},
+        {firstname: "Master", lastname: "Card", site: "http://mastercard.com"}
+    ];
+    var arr = document.getElementsByTagName('a');
+    for (var i = 0; i < arr.length; i++) {
+        arr[i].addEventListener("click", (function (i) {
+            return function (event) {
+                event.preventDefault();
+                alert(people[i].firstname + people[i].lastname);
+            }
+        })(i));
+    }
+</script>
+</body>
+</html>
